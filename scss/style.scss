@@ -1,0 +1,441 @@
+$base: #1f2023;
+$surface: #2d2f34;
+$light: #383b40;
+$green: #00a86b;
+
+$white: rgba(255, 255, 255, 0.9);
+$muted: rgba(255, 255, 255, 0.65);
+$subtext: rgba(255, 255, 255, 0.8);
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+
+body {
+    background-color: $base;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+h3,
+h4 {
+    font-weight: 500;
+    color: $white;
+}
+
+p {
+    color: $muted;
+}
+
+.wrapper {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.navbar {
+    display: none;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+
+    &__photo {
+        width: 5rem;
+    }
+
+    &__text {
+        margin-left: 10px;
+    }
+
+    &__name {
+        color: $white;
+        margin: 0;
+        margin-bottom: 5px;
+    }
+
+    &__subtext {
+        color: $muted;
+        margin: 0;
+        margin-bottom: 10px;
+    }
+
+    &__full-info {
+        display: none;
+
+        div {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        img {
+            width: 32px;
+            height: auto;
+            margin-right: 15px;
+        }
+
+        a {
+            color: $muted;
+            font-size: 18px;
+            text-decoration: none;
+        }
+    }
+}
+
+.bars {
+}
+
+.about {
+    &__slider {
+        width: 100%;
+        height: 200px;
+        background-color: $surface;
+        border-radius: 10px;
+    }
+
+    p {
+        color: $muted;
+    }
+}
+
+.tag {
+    text-decoration: none;
+    color: $green;
+}
+
+.skills {
+    &__list {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        padding: 0;
+    }
+
+    &__item {
+    }
+
+    &__header {
+        display: flex;
+    }
+
+    &__logo {
+        margin-right: 10px;
+    }
+}
+
+.portfolio {
+    &__slider {
+    }
+
+    .slider {
+        &__slide {
+            display: flex;
+            flex-direction: column;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        &__slide--active {
+        }
+
+        &__btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: $green;
+            text-decoration: none;
+            color: $white;
+            width: 100%;
+            height: 40px;
+            border-radius: 50px;
+        }
+    }
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.contacts {
+    background: url("/img/img__contacts/contacts1.png") no-repeat;
+    background-position: right;
+
+    &__info {
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        padding: 0;
+        list-style: none;
+    }
+
+    &__item {
+    }
+
+    &__link {
+    }
+
+    &__full-info {
+        color: $white;
+        font-size: 18px;
+
+        div {
+            display: flex;
+            margin-bottom: 30px;
+        }
+
+        a {
+            color: $muted;
+            text-decoration: none;
+            margin-left: 10px;
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .wrapper {
+        max-width: 980px;
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+        position: sticky;
+        top: 0;
+        width: 100%;
+        height: 80px;
+
+        &__item {
+            margin-right: 40px;
+            position: relative;
+            &:last-child {
+                margin-right: 0;
+            }
+            &:hover::before {
+                content: "";
+                position: absolute;
+                bottom: -2px;
+                left: 0;
+                right: 0;
+                width: 100%;
+                height: 2px;
+                background-color: $green;
+            }
+        }
+
+        &__link {
+            color: $white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+    }
+
+    .container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .profile {
+        width: 100%;
+        justify-content: space-around;
+
+        &__photo {
+            width: auto;
+        }
+
+        &__text {
+            margin-left: 10px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        &__name {
+            font-size: 48px;
+        }
+
+        &__subtext {
+            font-size: 24px;
+        }
+
+        &__full-info {
+            display: block;
+        }
+    }
+
+    .bars {
+        display: none;
+    }
+
+    .about {
+        &__slider {
+            position: relative;
+            width: 1400px;
+            height: 200px;
+            background-color: $surface;
+            overflow: hidden;
+
+            .prev, .next {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                background-color: $light;
+                cursor: pointer;
+            }
+
+            .prev {
+                left: 10px;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    border: solid $white;
+                    border-width: 0 2px 2px 0;
+                    left: 40%;
+                    top: 35%;
+                    display: inline-block;
+                    padding: 3px;
+                    transform: rotate(135deg);
+                }
+            }
+
+            .next {
+                right: 10px;
+                
+                &::before {
+                    content: "";
+                    position: absolute;
+                    border: solid $white;
+                    border-width: 0 2px 2px 0;
+                    left: 35%;
+                    top: 35%;
+                    display: inline-block;
+                    padding: 3px;
+                    transform: rotate(-45deg);
+                }
+            }
+
+        .slide {
+            float: left;
+
+            &__list {
+                list-style: none;
+            }
+
+            &__item {
+            }
+        }
+
+        p {
+            width: 50%;
+            margin-right: 0;
+            line-height: 150%;
+            letter-spacing: 0.05em;
+        }
+    }
+
+    .skills {
+        &__list {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        &__header {
+            flex-direction: column;
+        }
+
+        &__item {
+            width: 50%;
+
+            p {
+                width: 80%;
+                margin-right: 0;
+            }
+
+            &:first-child {
+                margin-right: 20px;
+            }
+        }
+
+        &__logo {
+            margin-right: 10px;
+            max-width: 40px;
+        }
+    }
+
+    .portfolio {
+        .slider {
+            &__slide {
+                flex-direction: row;
+                align-items: center;
+                img {
+                    width: auto;
+                    height: auto;
+                    margin-right: 20px;
+                }
+
+                h4 {
+                    margin-bottom: 40px;
+                }
+
+                p {
+                    width: 70%;
+                    margin-bottom: 20px;
+                }
+            }
+
+            &__btn {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: $green;
+                text-decoration: none;
+                color: $white;
+                width: 300px;
+                height: 40px;
+                border-radius: 50px;
+            }
+        }
+    }
+
+    .contacts {
+        img {
+            height: auto;
+        }
+
+        &__full-info {
+            div {
+                flex-direction: column;
+            }
+
+            a {
+                color: $muted;
+                text-decoration: none;
+                margin: 0;
+                margin-top: 15px;
+            }
+        }
+    }
+}
+}

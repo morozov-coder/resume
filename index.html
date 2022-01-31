@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Sergey Telkov</title>
+</head>
+<body>
+
+    <nav class="navbar">
+        <li class="navbar__item"><a href="#" class="navbar__link">Home</a></li>
+        <li class="navbar__item"><a href="#" class="navbar__link">About</a></li>
+        <li class="navbar__item"><a href="#" class="navbar__link">Skills</a></li>
+        <li class="navbar__item"><a href="#" class="navbar__link">Portfolio</a></li>
+        <li class="navbar__item"><a href="#" class="navbar__link">Contacts</a></li>
+    </nav>
+
+    <div class="wrapper"> <!--Responsive wrapper-->   
+
+        <header>
+            <div class="profile">
+                <img class="profile__photo" src="img/img__header/Photo-large.png" alt='Sergey Telkov'></img>
+                <div class="profile__text">
+                    <h3 class="profile__name">Sergey Telkov</h3>
+                    <h4 class="profile__subtext">Frontend-developer</h4>
+
+                    <div class="profile__full-info">
+                        <div>
+                            <img src="img/img__header/header__icons/email.svg" alt="">
+                            <a href="mailto:telkoffficial@gmail.com">telkoffficial@gmail.com</a>
+                        </div>
+    
+                        <div>
+                            <img src="img/img__header/header__icons/phone.svg" alt="">
+                            <a href="tel:+7-910-621-55-82">+7-910-621-55-82</a>
+                        </div>
+    
+                        <div>
+                            <img src="img/img__header/header__icons/location.svg" alt="">
+                            <a href="#">Ryzan, Russia</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button class="bars"> <!--Menu for mobile-app-->
+                <i></i>
+            </button>
+        </header>
+
+        <section class="about">
+            <h3>About me</h3>
+            <div class="container">
+                
+                <div>
+                    <span>
+                        <a href="#" class="tag">#18years</a>
+                        <a href="#" class="tag">#coffee</a>
+                        <a href="#" class="tag">#web</a>
+                    </span>
+        
+                    <p>Hi! I’m Sergey. I’m study in Ryzan College Electronics. I have some experience in web-development and web-design.
+                        Two years ago I have start learn basic of Web - HTML/CSS/JS and now I can use many web-techomologies such as:</p>
+        
+                </div>
+            
+                <div class="about__slider"> <!--Slider HTML/CSS/JS-->
+                    <div class="about__slide slide">
+                        <ul class="slide__list">
+                            <li class="slide__item">
+                                <img src="img/img__about/about__slider/slide-1/html.png" alt="HTML">
+                                HTML
+                            </li>
+
+                            <li class="slide__item">
+                                <img src="img/img__about/about__slider/slide-1/css.png" alt="CSS">
+                                CSS
+                            </li>
+
+                            <li class="slide__item">
+                                <img src="img/img__about/about__slider/slide-1/js.png" alt="JS">
+                                JS
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="about__slide slide">
+                        <ul class="slide__list">
+                            <li class="slide__item">
+                                <img src="img/img__about/about__slider/slide-2/jquery.png" alt="jquery">
+                                JQuery
+                            </li>
+
+                            <li class="slide__item">
+                                <img src="img/img__about/about__slider/slide-2/bootstrap.png" alt="bootstrap">
+                                Bootstrap
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="about__slide slide">
+                        <ul class="slide__list">
+                            <li class="slide__item">
+                                <img src="img/img__about/about__slider/slide-3/react.png" alt="react">
+                                React
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="prev"></div>
+                    <div class="next"></div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="skills">
+            <h3>Skills</h3>
+            <ul class="skills__list">
+                <!--Flex container (mobile-direction:rows)-->
+                <div class="container">
+                    <li class="skills__item">
+                        <div class="skills__header">
+                            <img class="skills__logo" src="img/img__skills/windows.svg" alt='Computer'></img>
+                            <h4>Windown and Linux</h4>
+                        </div>
+    
+                        <p>Work on Windows and Linux OS. Building of desktop and web applications.</p>
+                    </li>
+    
+                    <li class="skills__item">
+                        <div class="skills__header">
+                            <img class="skills__logo" src="img/img__skills/administrator.svg" alt='Computer'></img>
+                            <h4>Network systems</h4>
+                        </div>
+    
+                        <p>Working with network protocols such as HTTPS, FTP. Understanding the operation of the server, interaction with it.</p>
+    
+                    </li>
+                </div>
+
+                <div class="container">
+                    <li class="skills__item">
+                        <div class="skills__header">
+                            <img class="skills__logo" src="img/img__skills/git.svg" alt='Computer'></img>
+                            <h4>Project management</h4>
+                        </div>
+    
+                        <p>Create and manage repositories with version control system Git</p>
+    
+                    </li>
+    
+                    <li class="skills__item">
+                        <div class="skills__header">
+                            <img class="skills__logo" src="img/img__skills/english.svg" alt='Computer'></img>
+                            <h4>English level B2</h4>
+                        </div>
+    
+                        <p>Knowledge of English at the level of reading technical documentation.</p>
+    
+                    </li>
+                </div>
+            </ul>
+        </section>
+
+        <section class="portfolio">
+            <h3>Portfolio</h3>
+
+            <div class="portfolio__slider">
+                <!--Slider of my projects-->
+                <div class="slider__slide slider__slide--active">
+                    <img src="img/img__portfolio/Calories.png" alt="Calories calculator">
+                    <div>
+                        <h4>Calories calculator</h4>
+                        <p>I created this simple project using JS. Simple layout and adding functionality in the form of a calorie calculator.</p>
+
+                        <a href="https://morozov-coder.github.io/calories/" class="slider__btn" target="_blank">Let's try!</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contacts">
+            <h3>Contacts</h3>
+            <div class="container">
+                <div class="contacts__info">
+                    <h4>Contacts me with on</h4>
+
+                    <ul class="contacts__list">
+
+                        <li class="contacts__item">
+                            <a href="" class="contacts__link">
+                                <img src="img/img__contacts/contacts__links/in.svg" alt="">
+                            </a>
+                        </li>
+
+                        <li class="contacts__item">
+                            <a href="" class="contacts__link">
+                                <img src="img/img__contacts/contacts__links/insta.svg" alt="">
+                            </a>
+                        </li>
+
+                        <li class="contacts__item">
+                            <a href="" class="contacts__link">
+                                <img src="img/img__contacts/contacts__links/Be.svg" alt="">
+                            </a>
+                        </li>
+
+                        <li class="contacts__item">
+                            <a href="" class="contacts__link">
+                                <img src="img/img__contacts/contacts__links/Web.svg" alt="">
+                            </a>
+                        </li>
+
+                    </ul>
+
+                    <div class="contacts__full-info">
+                        <div>
+                            E-mail:
+                            <a href="mailto:telkoffficial@gmail.com">telkoffficial@gmail.com</a>
+                        </div>
+
+                        <div>
+                            Phone:
+                            <a href="tel:+7-910-621-55-82">+7-910-621-55-82</a>
+                        </div>
+
+                        <div>
+                            Address:
+                            <a href="#" target="_blank">Ryzan, Russia</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </div>
+
+    <script
+  src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+  integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="
+  crossorigin="anonymous"></script>
+  
+    <script src="js/main.js"></script>
+    <script src="js/slider.js"></script>
+</body>
+</html>
