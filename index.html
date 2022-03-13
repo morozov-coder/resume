@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/libs/chief-slider.min.css">
+    <script defer src="js/chief-slider.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Sergey Telkov</title>
 </head>
 <body>
@@ -45,9 +48,11 @@
                 </div>
             </div>
 
-            <button class="bars"> <!--Menu for mobile-app-->
-                <i></i>
-            </button>
+            <div class="bars"> <!--Menu for mobile-app-->
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </header>
 
         <section class="about">
@@ -67,50 +72,59 @@
                 </div>
             
                 <div class="about__slider"> <!--Slider HTML/CSS/JS-->
-                    <div class="about__slide slide">
-                        <ul class="slide__list">
-                            <li class="slide__item">
+                    <div class="slider__wrapper">
+                        <div class="slider__items">
+                          <div class="slider__item">
+                            <ul class="slider__list">
                                 <img src="img/img__about/about__slider/slide-1/html.png" alt="HTML">
                                 HTML
-                            </li>
+                            </ul>
 
-                            <li class="slide__item">
+                            <ul class="slider__list">
                                 <img src="img/img__about/about__slider/slide-1/css.png" alt="CSS">
                                 CSS
-                            </li>
+                            </ul>
 
-                            <li class="slide__item">
+                            <ul class="slider__list">
                                 <img src="img/img__about/about__slider/slide-1/js.png" alt="JS">
                                 JS
-                            </li>
-                        </ul>
-                    </div>
+                            </ul>
+                                                        
+                          </div>
 
-                    <div class="about__slide slide">
-                        <ul class="slide__list">
-                            <li class="slide__item">
+                          <div class="slider__item">
+                            <!-- Контент 2 слайда -->
+
+                            <ul class="slider__list">
                                 <img src="img/img__about/about__slider/slide-2/jquery.png" alt="jquery">
                                 JQuery
-                            </li>
+                            </ul>
 
-                            <li class="slide__item">
+                            <ul class="slider__list">
                                 <img src="img/img__about/about__slider/slide-2/bootstrap.png" alt="bootstrap">
                                 Bootstrap
-                            </li>
-                        </ul>
-                    </div>
+                            </ul>
 
-                    <div class="about__slide slide">
-                        <ul class="slide__list">
-                            <li class="slide__item">
+                          </div>
+
+                          <div class="slider__item">
+                            <!-- Контент 3 слайда -->
+                            <ul class="slider__list">
                                 <img src="img/img__about/about__slider/slide-3/react.png" alt="react">
                                 React
-                            </li>
-                        </ul>
-                    </div>
+                            </ul>
+                            
+                          </div>
 
-                    <div class="prev"></div>
-                    <div class="next"></div>
+                        </div>
+                      </div>
+                      <a href="#" class="slider__control" data-slide="prev"></a>
+                      <a href="#" class="slider__control" data-slide="next"></a>
+                      <ol class="slider__indicators">
+                        <li data-slide-to="0"></li>
+                        <li data-slide-to="1"></li>
+                        <li data-slide-to="2"></li>
+                      </ol>
                 </div>
 
             </div>
@@ -192,25 +206,25 @@
 
                         <li class="contacts__item">
                             <a href="" class="contacts__link">
-                                <img src="img/img__contacts/contacts__links/in.svg" alt="">
+                                <i class="fa fa-telegram" id="telegram"></i>
                             </a>
                         </li>
 
                         <li class="contacts__item">
                             <a href="" class="contacts__link">
-                                <img src="img/img__contacts/contacts__links/insta.svg" alt="">
+                                <i class="fa fa-twitter" id="twitter"></i>
                             </a>
                         </li>
 
                         <li class="contacts__item">
                             <a href="" class="contacts__link">
-                                <img src="img/img__contacts/contacts__links/Be.svg" alt="">
+                                <i class="fa fa-github-square github" id="github"></i>
                             </a>
                         </li>
 
                         <li class="contacts__item">
                             <a href="" class="contacts__link">
-                                <img src="img/img__contacts/contacts__links/Web.svg" alt="">
+                                <i class="fa fa-instagram" id="instagram"></i>
                             </a>
                         </li>
 
@@ -238,12 +252,10 @@
         </section>
     </div>
 
-    <script
-  src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
   integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="
   crossorigin="anonymous"></script>
   
     <script src="js/main.js"></script>
-    <script src="js/slider.js"></script>
 </body>
 </html>
