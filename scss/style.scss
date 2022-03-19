@@ -17,6 +17,10 @@ body {
     padding: 0;
 }
 
+body {
+    transition: 0.8;
+}
+
 h3,
 h4 {
     font-weight: 500;
@@ -40,6 +44,35 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.link {
+    color: $muted;
+    font-size: 18px;
+    text-decoration: none;
+    position: relative;
+
+    &--animated {
+        &:hover::before {
+            content: "";
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background-color: $green;
+            animation: link-animation ease-in-out 0.3s;
+        }
+        
+        @keyframes link-animation {
+            from {
+                width: 0%;
+            }
+            to {
+                width: 100%;
+            }
+        }
+    }
 }
 
 .profile {
@@ -74,11 +107,10 @@ header {
             height: auto;
             margin-right: 15px;
         }
-        a {
-            color: $muted;
-            font-size: 18px;
-            text-decoration: none;
-        }
+
+    }
+    &__link {
+
     }
 }
 
@@ -261,12 +293,14 @@ header {
             display: flex;
             margin-bottom: 30px;
         }
-        a {
-            color: $muted;
-            text-decoration: none;
-            margin-left: 10px;
-        }
     }
+
+    &__link {
+        color: $muted;
+        text-decoration: none;
+        margin-left: 10px;
+    }
+
     @keyframes animate {
         from {
             filter: hue-rotate(0deg);
@@ -308,29 +342,9 @@ header {
             &:last-child {
                 margin-right: 0;
             }
-            &:hover::before {
-                content: "";
-                position: absolute;
-                bottom: -3px;
-                left: 0;
-                right: 0;
-                height: 2px;
-                background-color: $green;
-                animation: navbar-animation ease-in-out 0.3s;
-            }
-            @keyframes navbar-animation {
-                from {
-                    width: 0%;
-                }
-                to {
-                    width: 100%;
-                }
-            }
         }
         &__link {
             color: $white;
-            text-decoration: none;
-            font-size: 18px;
         }
     }
     .container {
@@ -356,6 +370,12 @@ header {
         }
         &__full-info {
             display: block;
+        }
+        &__link {
+
+            &:hover {
+                color: $green;
+            }
         }
     }
     .bars {
@@ -485,12 +505,10 @@ header {
             div {
                 flex-direction: column;
             }
-            a {
-                color: $muted;
-                text-decoration: none;
-                margin: 0;
-                margin-top: 15px;
-            }
+        }
+        &__link {
+            margin: 0;
+            margin-top: 15px;
         }
     }
 }
