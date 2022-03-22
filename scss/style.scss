@@ -44,7 +44,6 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     &::after {
         content: '';
         position: absolute;
@@ -55,7 +54,6 @@ header {
         background-color: $green;
         overflow: hidden;
         z-index: -1;
-
     }
 }
 
@@ -64,7 +62,6 @@ header {
     font-size: 18px;
     text-decoration: none;
     position: relative;
-
     &--animated {
         &:hover::before {
             content: "";
@@ -76,7 +73,6 @@ header {
             background-color: $green;
             animation: link-animation ease-in-out 0.3s;
         }
-        
         @keyframes link-animation {
             from {
                 width: 0%;
@@ -120,11 +116,8 @@ header {
             height: auto;
             margin-right: 15px;
         }
-
     }
-    &__link {
-
-    }
+    &__link {}
 }
 
 .bars {
@@ -248,7 +241,6 @@ header {
         p {
             margin-top: 0;
         }
-
         &--entered {
             position: absolute;
         }
@@ -293,7 +285,7 @@ header {
 }
 
 .contacts {
-    background: url("/img/img__contacts/contacts1.png") no-repeat;
+    background: url("img/img__contacts/contacts1.png") no-repeat;
     background-position: right;
     &__info {}
     &__list {
@@ -312,13 +304,11 @@ header {
             margin-bottom: 30px;
         }
     }
-
     &__link {
         color: $muted;
         text-decoration: none;
         margin-left: 10px;
     }
-
     @keyframes animate {
         from {
             filter: hue-rotate(0deg);
@@ -395,7 +385,6 @@ header {
             margin-top: 20px;
         }
         &__link {
-
             &:hover {
                 color: $green;
             }
@@ -445,16 +434,16 @@ header {
                 margin-right: 20px;
             }
             .container:nth-child(1) &:nth-child(1) {
-                background-image: url("/img/img__skills/skills__background/windows.jpg");
+                background-image: url("img/img__skills/skills__background/windows.jpg");
             }
             .container:nth-child(1) &:nth-child(2) {
-                background-image: url("/img/img__skills/skills__background/administrator.jpg");
+                background-image: url("img/img__skills/skills__background/administrator.jpg");
             }
             .container:nth-child(2) &:nth-child(1) {
-                background-image: url("/img/img__skills/skills__background/git.jpg");
+                background-image: url("img/img__skills/skills__background/git.jpg");
             }
             .container:nth-child(2) &:nth-child(2) {
-                background-image: url("/img/img__skills/skills__background/english.jpg");
+                background-image: url("img/img__skills/skills__background/english.jpg");
             }
         }
         &__logo {

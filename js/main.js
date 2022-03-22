@@ -25,7 +25,7 @@ $(document).ready(() => {
 
     $('.navbar__link').on('click', (evt) => {
         evt.preventDefault();
-        $('html, body').animate({ scrollTop: $("." + evt.target.id).offset().top - 100}, 500);
+        $('html, body').animate({ scrollTop: $("." + evt.target.id).offset().top - 100 }, 500);
     })
 
     // $('.skills__item').on('mouseenter', (evt) => {
