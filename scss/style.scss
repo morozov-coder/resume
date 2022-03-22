@@ -285,7 +285,7 @@ header {
 }
 
 .contacts {
-    background: url("img/img__contacts/contacts1.png") no-repeat;
+    background: url("../img/img__contacts/contacts1.png") no-repeat;
     background-position: right;
     &__info {}
     &__list {
@@ -434,16 +434,16 @@ header {
                 margin-right: 20px;
             }
             .container:nth-child(1) &:nth-child(1) {
-                background-image: url("img/img__skills/skills__background/windows.jpg");
+                background-image: url("../img/img__skills/skills__background/windows.jpg");
             }
             .container:nth-child(1) &:nth-child(2) {
-                background-image: url("img/img__skills/skills__background/administrator.jpg");
+                background-image: url("../img/img__skills/skills__background/administrator.jpg");
             }
             .container:nth-child(2) &:nth-child(1) {
-                background-image: url("img/img__skills/skills__background/git.jpg");
+                background-image: url("../img/img__skills/skills__background/git.jpg");
             }
             .container:nth-child(2) &:nth-child(2) {
-                background-image: url("img/img__skills/skills__background/english.jpg");
+                background-image: url("../img/img__skills/skills__background/english.jpg");
             }
         }
         &__logo {
