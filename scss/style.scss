@@ -18,7 +18,7 @@ body {
 }
 
 body {
-    transition: 0.8;
+    transition: 0.8s;
 }
 
 h3,
@@ -32,8 +32,7 @@ p {
 }
 
 .wrapper {
-    margin-left: 20px;
-    margin-right: 20px;
+    max-width: 320px;
 }
 
 .navbar {
@@ -44,17 +43,6 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    &::after {
-        content: '';
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 20rem;
-        background-color: $green;
-        overflow: hidden;
-        z-index: -1;
-    }
 }
 
 .link {
@@ -205,10 +193,10 @@ header {
         overflow: hidden;
         min-height: 100%;
     }
-    &__control {
+    .slider>&__control {
         display: none;
     }
-    &__indicators {
+    .slider>&__indicators+&__control {
         display: none;
     }
     &__item {
@@ -319,6 +307,12 @@ header {
     }
 }
 
+@media (min-width: 375px) {
+    .wrapper {
+        max-width: 350px;
+    }
+}
+
 @media (min-width: 992px) {
     .wrapper {
         max-width: 980px;
@@ -361,6 +355,19 @@ header {
     .container {
         flex-direction: row;
         justify-content: space-between;
+    }
+    header {
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 20rem;
+            background-color: $green;
+            overflow: hidden;
+            z-index: -1;
+        }
     }
     .profile {
         width: 100%;
