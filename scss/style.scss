@@ -194,10 +194,10 @@ header {
         overflow: hidden;
         min-height: 100%;
     }
-    .slider > &__control {
+    .slider>&__control {
         display: none;
     }
-    .slider > &__indicators + &__control {
+    .slider>&__indicators+&__control {
         display: none;
     }
     &__item {
@@ -410,7 +410,6 @@ header {
             }
         }
     }
-
     .skills {
         display: block;
         &__list {
