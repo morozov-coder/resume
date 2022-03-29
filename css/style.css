@@ -411,7 +411,7 @@ header {
   }
 }
 
-@media (min-width: 450px) {
+@media (min-width: 375px) {
   .wrapper {
     max-width: 350px;
   }
