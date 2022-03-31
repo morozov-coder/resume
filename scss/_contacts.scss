@@ -1,18 +1,11 @@
 .contacts {
-    background: url("../img/img__contacts/contacts1.png") no-repeat;
-    background-position: right;
-    &__info {
-    }
     &__list {
         display: flex;
         justify-content: space-between;
         padding: 0;
         list-style: none;
     }
-    &__item {
-    }
-    &__link {
-    }
+
     &__full-info {
         color: $white;
         font-size: 18px;
@@ -26,19 +19,14 @@
         text-decoration: none;
         margin-left: 10px;
     }
-    @keyframes animate {
-        from {
-            filter: hue-rotate(0deg);
-        }
-        to {
-            filter: hue-rotate(360deg);
-        }
-    }
+
+    
 }
 
 @media (min-width: 992px) {
-
     .contacts {
+        background: url("../img/img__contacts/contacts1.png") no-repeat;
+        background-position: right;
         img {
             height: auto;
         }
@@ -61,6 +49,16 @@
                 animation: animate 3s linear infinite;
                 text-shadow: 0 0 50px #0072ff, 0 0 100px #0072ff, 0 0 150px #0072ff, 0 0 200px #0072ff;
             }
+
+            @keyframes animate {
+                from {
+                    filter: hue-rotate(0deg);
+                }
+                to {
+                    filter: hue-rotate(360deg);
+                }
+            }
+
             #twitter {
                 animation-delay: 0.3s;
             }

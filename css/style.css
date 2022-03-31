@@ -461,11 +461,6 @@ header {
   }
 }
 
-.contacts {
-  background: url("../img/img__contacts/contacts1.png") no-repeat;
-  background-position: right;
-}
-
 .contacts__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -495,29 +490,11 @@ header {
   margin-left: 10px;
 }
 
-@-webkit-keyframes animate {
-  from {
-    -webkit-filter: hue-rotate(0deg);
-            filter: hue-rotate(0deg);
-  }
-  to {
-    -webkit-filter: hue-rotate(360deg);
-            filter: hue-rotate(360deg);
-  }
-}
-
-@keyframes animate {
-  from {
-    -webkit-filter: hue-rotate(0deg);
-            filter: hue-rotate(0deg);
-  }
-  to {
-    -webkit-filter: hue-rotate(360deg);
-            filter: hue-rotate(360deg);
-  }
-}
-
 @media (min-width: 992px) {
+  .contacts {
+    background: url("../img/img__contacts/contacts1.png") no-repeat;
+    background-position: right;
+  }
   .contacts img {
     height: auto;
   }
@@ -546,6 +523,26 @@ header {
     -webkit-animation: animate 3s linear infinite;
             animation: animate 3s linear infinite;
     text-shadow: 0 0 50px #0072ff, 0 0 100px #0072ff, 0 0 150px #0072ff, 0 0 200px #0072ff;
+  }
+  @-webkit-keyframes animate {
+    from {
+      -webkit-filter: hue-rotate(0deg);
+              filter: hue-rotate(0deg);
+    }
+    to {
+      -webkit-filter: hue-rotate(360deg);
+              filter: hue-rotate(360deg);
+    }
+  }
+  @keyframes animate {
+    from {
+      -webkit-filter: hue-rotate(0deg);
+              filter: hue-rotate(0deg);
+    }
+    to {
+      -webkit-filter: hue-rotate(360deg);
+              filter: hue-rotate(360deg);
+    }
   }
   .contacts__item #twitter {
     -webkit-animation-delay: 0.3s;
