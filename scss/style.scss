@@ -426,6 +426,8 @@ header {
             flex-direction: column;
         }
         &__item {
+            position: relative;
+            overflow: hidden;
             width: 50%;
             background: rgba(0, 0, 0, 0.7) no-repeat right;
             background-blend-mode: darken;
@@ -452,6 +454,41 @@ header {
             .container:nth-child(2) &:nth-child(2) {
                 background-image: url("../img/img__skills/skills__background/english.jpg");
             }
+
+            &:hover::before {
+                transform: skew(30deg) translate(60%);
+              }
+              
+              &:hover::after {
+                transform: skew(-30deg) translate(60%);
+              }
+              
+              &::before {
+                content: '';
+                position: absolute;
+                right: 0px;
+                top: 0px;
+                width: 100px;
+                height: 100%;
+                background: #00a86b;
+                transform: skew(30deg) translate(160%);
+                opacity: 0.8;
+                transition: all 0.6s ease;
+              }
+              
+              &::after {
+                content: '';
+                position: absolute;
+                right: 0px;
+                bottom: 0px;
+                width: 100px;
+                height: 100%;
+                background: #00a86b;
+                transform: skew(-30deg) translate(160%);
+                box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+                opacity: 0.8;
+                transition: all 0.8s ease;
+              }
         }
         &__logo {
             margin-right: 10px;
