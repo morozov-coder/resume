@@ -105,7 +105,8 @@ header {
             margin-right: 15px;
         }
     }
-    &__link {}
+    &__link {
+    }
 }
 
 // вырезан
@@ -193,10 +194,10 @@ header {
         overflow: hidden;
         min-height: 100%;
     }
-    .slider>&__control {
+    .slider > &__control {
         display: none;
     }
-    .slider>&__indicators+&__control {
+    .slider > &__indicators + &__control {
         display: none;
     }
     &__item {
@@ -242,7 +243,8 @@ header {
 }
 
 .portfolio {
-    &__slider {}
+    &__slider {
+    }
     .slider {
         &__slide {
             display: flex;
@@ -252,7 +254,8 @@ header {
                 height: auto;
             }
         }
-        &__slide--active {}
+        &__slide--active {
+        }
         &__btn {
             display: flex;
             justify-content: center;
@@ -275,15 +278,18 @@ header {
 .contacts {
     background: url("../img/img__contacts/contacts1.png") no-repeat;
     background-position: right;
-    &__info {}
+    &__info {
+    }
     &__list {
         display: flex;
         justify-content: space-between;
         padding: 0;
         list-style: none;
     }
-    &__item {}
-    &__link {}
+    &__item {
+    }
+    &__link {
+    }
     &__full-info {
         color: $white;
         font-size: 18px;
@@ -358,7 +364,7 @@ header {
     }
     header {
         &::after {
-            content: '';
+            content: "";
             position: absolute;
             left: 0;
             top: 0;
@@ -424,21 +430,30 @@ header {
         }
         &__header {
             flex-direction: column;
+
+            h4 {
+                opacity: 0;
+                transition: all 0.6s;
+            }
         }
         &__item {
             position: relative;
             overflow: hidden;
             width: 50%;
-            background: rgba(0, 0, 0, 0.7) no-repeat right;
+            background: no-repeat right;
             background-blend-mode: darken;
             background-size: cover;
             border-radius: 1rem;
             margin-bottom: 20px;
             padding: 20px;
+
             p {
                 width: 80%;
                 margin-right: 0;
+                opacity: 0;
+                transition: all 0.6s;
             }
+
             &:first-child {
                 margin-right: 20px;
             }
@@ -455,16 +470,30 @@ header {
                 background-image: url("../img/img__skills/skills__background/english.jpg");
             }
 
+            &:hover {
+                background: rgba(0, 0, 0, 0.7) no-repeat right;
+                background-blend-mode: darken;
+                background-size: cover;
+
+                h4 {
+                    opacity: 1;
+                }
+
+                p {
+                    opacity: 1;
+                }
+            }
+
             &:hover::before {
                 transform: skew(30deg) translate(60%);
-              }
-              
-              &:hover::after {
+            }
+
+            &:hover::after {
                 transform: skew(-30deg) translate(60%);
-              }
-              
-              &::before {
-                content: '';
+            }
+
+            &::before {
+                content: "";
                 position: absolute;
                 right: 0px;
                 top: 0px;
@@ -474,10 +503,10 @@ header {
                 transform: skew(30deg) translate(160%);
                 opacity: 0.8;
                 transition: all 0.6s ease;
-              }
-              
-              &::after {
-                content: '';
+            }
+
+            &::after {
+                content: "";
                 position: absolute;
                 right: 0px;
                 bottom: 0px;
@@ -488,7 +517,7 @@ header {
                 box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
                 opacity: 0.8;
                 transition: all 0.8s ease;
-              }
+            }
         }
         &__logo {
             margin-right: 10px;
@@ -540,7 +569,9 @@ header {
                 font-size: 2em;
                 background-color: #18191f;
                 color: #fff;
-                box-shadow: 2px 2px 2px #00000080, 10px 1px 12px #00000080, 2px 2px 10px #00000080, 2px 2px 3px #00000080, inset 2px 2px 10px #00000080, inset 2px 2px 10px #00000080, inset 2px 2px 10px #00000080, inset 2px 2px 10px #00000080;
+                box-shadow: 2px 2px 2px #00000080, 10px 1px 12px #00000080, 2px 2px 10px #00000080,
+                    2px 2px 3px #00000080, inset 2px 2px 10px #00000080, inset 2px 2px 10px #00000080,
+                    inset 2px 2px 10px #00000080, inset 2px 2px 10px #00000080;
                 border-radius: 15%;
                 margin-right: 20px;
                 padding: 10px;

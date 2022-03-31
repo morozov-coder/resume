@@ -406,7 +406,7 @@ header {
             justify-content: space-between;
   }
   header::after {
-    content: '';
+    content: "";
     position: absolute;
     left: 0;
     top: 0;
@@ -476,11 +476,16 @@ header {
         -ms-flex-direction: column;
             flex-direction: column;
   }
+  .skills__header h4 {
+    opacity: 0;
+    -webkit-transition: all 0.6s;
+    transition: all 0.6s;
+  }
   .skills__item {
     position: relative;
     overflow: hidden;
     width: 50%;
-    background: rgba(0, 0, 0, 0.7) no-repeat right;
+    background: no-repeat right;
     background-blend-mode: darken;
     background-size: cover;
     border-radius: 1rem;
@@ -490,6 +495,9 @@ header {
   .skills__item p {
     width: 80%;
     margin-right: 0;
+    opacity: 0;
+    -webkit-transition: all 0.6s;
+    transition: all 0.6s;
   }
   .skills__item:first-child {
     margin-right: 20px;
@@ -506,6 +514,17 @@ header {
   .container:nth-child(2) .skills__item:nth-child(2) {
     background-image: url("../img/img__skills/skills__background/english.jpg");
   }
+  .skills__item:hover {
+    background: rgba(0, 0, 0, 0.7) no-repeat right;
+    background-blend-mode: darken;
+    background-size: cover;
+  }
+  .skills__item:hover h4 {
+    opacity: 1;
+  }
+  .skills__item:hover p {
+    opacity: 1;
+  }
   .skills__item:hover::before {
     -webkit-transform: skew(30deg) translate(60%);
             transform: skew(30deg) translate(60%);
@@ -515,7 +534,7 @@ header {
             transform: skew(-30deg) translate(60%);
   }
   .skills__item::before {
-    content: '';
+    content: "";
     position: absolute;
     right: 0px;
     top: 0px;
@@ -529,7 +548,7 @@ header {
     transition: all 0.6s ease;
   }
   .skills__item::after {
-    content: '';
+    content: "";
     position: absolute;
     right: 0px;
     bottom: 0px;
@@ -606,8 +625,8 @@ header {
     font-size: 2em;
     background-color: #18191f;
     color: #fff;
-    -webkit-box-shadow: 2px 2px 2px #00000080, 10px 1px 12px #00000080, 2px 2px 10px #00000080, 2px 2px 3px #00000080, inset 2px 2px 10px #00000080, inset 2px 2px 10px #00000080, inset 2px 2px 10px #00000080, inset 2px 2px 10px #00000080;
-            box-shadow: 2px 2px 2px #00000080, 10px 1px 12px #00000080, 2px 2px 10px #00000080, 2px 2px 3px #00000080, inset 2px 2px 10px #00000080, inset 2px 2px 10px #00000080, inset 2px 2px 10px #00000080, inset 2px 2px 10px #00000080;
+    -webkit-box-shadow: 2px 2px 2px #00000080, 10px 1px 12px #00000080, 2px 2px 10px #00000080, 2px 2px 3px #00000080, inset 2px 2px 10px #00000080, inset 2px 2px 10px #00000080, inset 2px 2px 10px #00000080, inset 2px 2px 10px #00000080;
+            box-shadow: 2px 2px 2px #00000080, 10px 1px 12px #00000080, 2px 2px 10px #00000080, 2px 2px 3px #00000080, inset 2px 2px 10px #00000080, inset 2px 2px 10px #00000080, inset 2px 2px 10px #00000080, inset 2px 2px 10px #00000080;
     border-radius: 15%;
     margin-right: 20px;
     padding: 10px;
