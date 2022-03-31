@@ -6,12 +6,15 @@
         overflow: hidden;
         min-height: 100%;
     }
-    .slider > &__control {
+    &__control[data-slide=prev],
+    &__control[data-slide=next] {
         display: none;
     }
-    .slider > &__indicators + &__control {
-        display: none;
+
+    #slider-indicator  {
+        display: none !important;
     }
+
     &__item {
         display: flex;
         justify-content: space-around;
@@ -31,6 +34,11 @@
 }
 
 @media (min-width: 992px) {
-
-
+    .slider {
+        &__control[data-slide=prev],
+        &__control[data-slide=next] {
+            display: flex;
+        }
+    }
+    
 }

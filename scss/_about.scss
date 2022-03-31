@@ -1,9 +1,11 @@
 .about {
     &__slider {
+        position: relative;
         width: 100%;
         height: 200px;
         background-color: $surface;
         border-radius: 10px;
+        overflow: hidden;
     }
     p {
         color: $muted;
@@ -19,11 +21,10 @@
 @media (min-width: 992px) {
     .about {
         &__slider {
-            position: relative;
             width: 1400px;
-            height: 200px;
-            background-color: $surface;
-            overflow: hidden;
+            
+            
+            
             p {
                 width: 30%;
                 margin-right: 0;

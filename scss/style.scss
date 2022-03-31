@@ -17,6 +17,7 @@ $subtext: rgba(255, 255, 255, 0.8);
 @import 'contacts';
 
 body {
+    transition: 0.8s;
     background-color: $base;
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
@@ -25,10 +26,6 @@ body {
     align-items: center;
     margin: 0;
     padding: 0;
-}
-
-body {
-    transition: 0.8s;
 }
 
 h3,
@@ -77,8 +74,6 @@ p {
     flex-direction: column;
 }
 
-
-
 @media (min-width: 375px) {
     .wrapper {
         max-width: 350px;
@@ -103,7 +98,4 @@ p {
         justify-content: space-between;
     }
 
-    // .bars {
-    //     display: none;
-    // }
 }
