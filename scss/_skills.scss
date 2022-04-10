@@ -1,0 +1,130 @@
+.skills {
+    position: relative;
+    &__list {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        padding: 0;
+    }
+    &__item {
+        p {
+            margin-top: 0;
+        }
+        &--entered {
+            position: absolute;
+        }
+    }
+    &__header {
+        display: flex;
+    }
+    &__logo {
+        margin-right: 10px;
+    }
+}
+
+@media (min-width: 992px) {
+    .skills {
+        display: block;
+        &__list {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        &__header {
+            flex-direction: column;
+
+            h4 {
+                opacity: 0;
+                transition: all 0.6s;
+            }
+        }
+        &__item {
+            position: relative;
+            overflow: hidden;
+            width: 50%;
+            background: no-repeat right;
+            background-blend-mode: darken;
+            background-size: cover;
+            border-radius: 1rem;
+            margin-bottom: 20px;
+            padding: 20px;
+
+            p {
+                width: 80%;
+                margin-right: 0;
+                opacity: 0;
+                transition: all 0.6s;
+            }
+
+            &:first-child {
+                margin-right: 20px;
+            }
+            .container:nth-child(1) &:nth-child(1) {
+                background-image: url("../img/img__skills/skills__background/windows.jpg");
+            }
+            .container:nth-child(1) &:nth-child(2) {
+                background-image: url("../img/img__skills/skills__background/administrator.jpg");
+            }
+            .container:nth-child(2) &:nth-child(1) {
+                background-image: url("../img/img__skills/skills__background/git.jpg");
+            }
+            .container:nth-child(2) &:nth-child(2) {
+                background-image: url("../img/img__skills/skills__background/english.jpg");
+            }
+
+            &:hover {
+                background: rgba(0, 0, 0, 0.7) no-repeat right;
+                background-blend-mode: darken;
+                background-size: cover;
+
+                h4 {
+                    opacity: 1;
+                }
+
+                p {
+                    opacity: 1;
+                }
+            }
+
+            &:hover::before {
+                transform: skew(30deg) translate(60%);
+            }
+
+            &:hover::after {
+                transform: skew(-30deg) translate(60%);
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                right: 0px;
+                top: 0px;
+                width: 100px;
+                height: 100%;
+                background: #00a86b;
+                transform: skew(30deg) translate(160%);
+                opacity: 0.8;
+                transition: all 0.6s ease;
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                right: 0px;
+                bottom: 0px;
+                width: 100px;
+                height: 100%;
+                background: #00a86b;
+                transform: skew(-30deg) translate(160%);
+                box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+                opacity: 0.8;
+                transition: all 0.8s ease;
+            }
+        }
+        &__logo {
+            margin-right: 10px;
+            max-width: 40px;
+        }
+    }
+
+}

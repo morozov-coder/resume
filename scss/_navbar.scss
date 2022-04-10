@@ -1,0 +1,36 @@
+.navbar {
+    display: none;
+}
+
+@media (min-width: 992px) {
+    .navbar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+        position: sticky;
+        top: 0;
+        width: 100%;
+        height: 80px;
+        z-index: 100;
+        transition: 0.5s;
+        &.scroll {
+            background: rgba(0, 0, 0, 0.8);
+            height: 80px;
+        }
+        &__item {
+            margin-right: 40px;
+            position: relative;
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+        &__link {
+            color: $white;
+            &:hover::before {
+                background-color: $white;
+            }
+        }
+    }
+
+}
