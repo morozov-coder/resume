@@ -5,10 +5,10 @@ $(document).ready(() => {
         interval: 7000,
     });
 
-    // const portfolio = new ChiefSlider('.portfolio__slider', {
-    //     loop: true,
-    //     autoplay: false,
-    // })
+    const portfolio = new ChiefSlider('.portfolio__slider', {
+        loop: true,
+        autoplay: false,
+    })
 
     $(window).on('scroll', () => {
         if (window.pageYOffset === 0) {
